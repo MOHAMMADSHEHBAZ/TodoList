@@ -15,7 +15,7 @@ if(isset($_GET['delete'])){
   $result = mysqli_query($conn,$sql);
   $task = $_GET['delete'];
   if ($task) {
-    $_SESSION['success'] = "Task Deleted successfully!";}
+    $_SESSION['error'] = "Task Deleted successfully!";}
 }
 if($_SERVER['REQUEST_METHOD']== 'POST'){
   if(isset($_POST['snoEdit'])){
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     $task = $_POST['titleEdit'];
     $task = $_POST['descriptionEdit'];
     if ($task) {
-      $_SESSION['success'] = "Task Updated successfully!";}
+      $_SESSION['warning'] = "Task Updated successfully!";}
     header("Location: " . $_SERVER['REQUEST_URI']);
     exit();
   }
@@ -190,6 +190,14 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
         if (isset($_SESSION['success'])) {
             echo 'toastr.success("' . $_SESSION['success'] . '");';
             unset($_SESSION['success']);
+        }
+        if (isset($_SESSION['error'])) {
+            echo 'toastr.error("' . $_SESSION['error'] . '");';
+            unset($_SESSION['error']);
+        }
+        if (isset($_SESSION['warning'])) {
+            echo 'toastr.warning("' . $_SESSION['warning'] . '");';
+            unset($_SESSION['warning']);
         }
         ?>
     </script>    

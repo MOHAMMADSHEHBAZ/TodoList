@@ -32,6 +32,12 @@ table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataT
 .toast-success {
   opacity: 2 !important;
 }
+.toast-error {
+  opacity: 2 !important;
+}
+.toast-warning {
+  opacity: 2 !important;
+}
 .count{
   display: flex;
   align-items: center;
