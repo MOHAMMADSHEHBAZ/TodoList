@@ -32,3 +32,20 @@ table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataT
 .toast-success {
   opacity: 2 !important;
 }
+.count{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #264653;
+  width: 20% !important;
+  flex-direction: row;
+  border-radius: 5px;
+}
+.count div{
+  color: #fff;
+  font-size: 22px;
+}
+.count p{
+  color: #fff;
+  font-size: 22px;
+}
